@@ -47,8 +47,8 @@ void keypadEvent(KeypadEvent key){
     case PRESSED:
       switch (key){
         case '#':   
-          Serial.println("Done here, the code you just put is : ");
           aOPCSerial.addItem("password",opc_readwrite, opc_int, callback);
+          Serial.println("Done here, the code you just put is : ");
           Serial.println(code);
           code="";
           break;  
